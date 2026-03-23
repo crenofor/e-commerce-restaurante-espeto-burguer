@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espeto Burguer THE</title>
+
+  <!-- LINK DO CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="logo">
+
+  <h1>Espeto Burguer The</h1>
+  <p>Escolha sua opção 👇</p>
+
+  <!-- WHATSAPP -->
+  <div class="card">
+    <div class="card-left">
+      <div class="icon">💬</div>
+      <div class="text">
+        <strong>WhatsApp - Pedido</strong>
+        <small>Faça seu Pedido</small>
+      </div>
+    </div>
+    <button class="btn" onclick="whatsapp()">Abrir</button>
+  </div>
+
+  <!-- CARDÁPIO -->
+  <div class="card">
+    <div class="card-left">
+      <div class="icon">📋</div>
+      <div class="text">
+        <strong>Cardápio</strong>
+        <small>Veja nossos produtos</small>
+      </div>
+    </div>
+    <button class="btn" onclick="cardapio()">Abrir</button>
+  </div>
+
+</div>
+
+<script>
+function whatsapp() {
+  window.open("https://wa.me/5599999999999?text=Olá! Preciso de atendimento 🍔");
+}
+
+function cardapio() {
+  window.open("https://seulinkdocardapio.com");
+}
+</script>
+
+</body>
+</html>
