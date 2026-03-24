@@ -1,59 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espeto Burguer THE</title>
-
-  <!-- LINK DO CSS -->
+  <title>The Dog Burger</title>
   <link rel="stylesheet" href="style.css">
-</head>
 
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 <body>
 
-<div class="container">
+  <main class="page">
+    <!-- LADO ESQUERDO -->
+    <aside class="profile">
+      <img 
+        src="img/images1.png" 
+        alt="Logo da hamburgueria" 
+        class="logo"
+      >
 
-  <!-- LOGO -->
-  <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="logo">
+      <h1>Espeto Burguer</h1>
+      <p>Arraste e confira nossos links</p>
 
-  <h1>Espeto Burguer The</h1>
-  <p>Escolha sua opção 👇</p>
-
-  <!-- WHATSAPP -->
-  <div class="card">
-    <div class="card-left">
-      <div class="icon">💬</div>
-      <div class="text">
-        <strong>WhatsApp - Pedido</strong>
-        <small>Faça seu Pedido</small>
+      <div class="socials">
+        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
-    </div>
-    <button class="btn" onclick="whatsapp()">Abrir</button>
-  </div>
+    </aside>
 
-  <!-- CARDÁPIO -->
-  <div class="card">
-    <div class="card-left">
-      <div class="icon">📋</div>
-      <div class="text">
-        <strong>Cardápio</strong>
-        <small>Veja nossos produtos</small>
+    <!-- LADO DIREITO -->
+    <section class="links-area">
+
+      <div class="link-card">
+        <div class="card-thumb delivery">
+          <span>DELIVERY</span>
+        </div>
+
+        <div class="card-text">
+          <h2>Delivery - Centenário</h2>
+          <p>Faça seu pedido através do WhatsApp</p>
+        </div>
+
+        <button class="open-btn" onclick="whatsapp()">Abrir</button>
       </div>
-    </div>
-    <button class="btn" onclick="cardapio()">Abrir</button>
-  </div>
 
-</div>
+      <div class="link-card">
+        <div class="card-thumb whatsapp">
+          <span>WHATSAPP</span>
+        </div>
 
-<script>
-function whatsapp() {
-  window.open("https://wa.me/5599999999999?text=Olá! Preciso de atendimento 🍔");
-}
+        <div class="card-text">
+          <h2>WhatsApp - Dirceu</h2>
+          <p>Fale com a unidade Dirceu</p>
+        </div>
 
-function cardapio() {
-  window.open("https://seulinkdocardapio.com");
-}
-</script>
+        <button class="open-btn" onclick="whatsapp2()">Abrir</button>
+      </div>
 
+      <div class="link-card">
+        <div class="card-thumb menu">
+          <span>CARDÁPIO</span>
+        </div>
+
+        <div class="card-text">
+          <h2>Cardápio</h2>
+          <p>Acesse nosso cardápio</p>
+        </div>
+
+        <button class="open-btn" onclick="cardapio()">Abrir</button>
+      </div>
+
+      <div class="link-card">
+        <div class="card-thumb location">
+          <span>LOCALIZAÇÃO</span>
+        </div>
+
+        <div class="card-text">
+          <h2>Localização - Centenário</h2>
+          <p>Confira a localização da unidade no Centenário</p>
+        </div>
+
+        <button class="open-btn" onclick="localizacao1()">Abrir</button>
+      </div>
+
+      <div class="link-card">
+        <div class="card-thumb location">
+          <span>LOCALIZAÇÃO</span>
+        </div>
+
+        <div class="card-text">
+          <h2>Localização - Dirceu</h2>
+          <p>Confira a localização da nossa unidade no Dirceu</p>
+        </div>
+
+        <button class="open-btn" onclick="localizacao2()">Abrir</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
