@@ -3,103 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Dog Burger</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Espeto Burguer THE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <main class="page">
-    <!-- LADO ESQUERDO -->
-    <aside class="profile">
-      <img 
-        src="img/images1.png" 
-        alt="Logo da hamburgueria" 
-        class="logo"
-      >
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-area">
+      <img src="img/images1.png" alt="Logo" class="logo">
+      <h1 class="logo-text">Espeto Burguer</h1>
+    </div>
 
-      <h1>Espeto Burguer</h1>
-      <p>Arraste e confira nossos links</p>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-      <div class="socials">
-        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Sabor de verdade em cada mordida</h2>
+      <p>Hambúrgueres, espetos, combos e muito mais para matar sua fome.</p>
+      <div class="hero-buttons">
+        <a href="#cardapio" class="btn primary">Ver Cardápio</a>
+        <button class="btn secondary" onclick="abrirWhatsApp()">Pedir no WhatsApp</button>
       </div>
-    </aside>
+    </div>
+  </section>
 
-    <!-- LADO DIREITO -->
-    <section class="links-area">
+  <!-- DESTAQUES -->
+  <section class="highlights">
+    <div class="highlight-box">
+      <h3>Entrega rápida</h3>
+      <p>Seu pedido chegando quentinho e com agilidade.</p>
+    </div>
 
-      <div class="link-card">
-        <div class="card-thumb delivery">
-          <span>DELIVERY</span>
+    <div class="highlight-box">
+      <h3>Ingredientes selecionados</h3>
+      <p>Qualidade e sabor em cada produto do cardápio.</p>
+    </div>
+
+    <div class="highlight-box">
+      <h3>Atendimento fácil</h3>
+      <p>Peça pelo WhatsApp de forma rápida e prática.</p>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio" class="section">
+    <div class="section-title">
+      <h2>Nosso Cardápio</h2>
+      <p>Conheça alguns dos nossos produtos</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="badge">Mais pedido</span>
+        <h3>X-Burger</h3>
+        <p>Pão, carne artesanal, queijo, alface, tomate e molho especial.</p>
+        <div class="menu-footer">
+          <span>R$ 18,00</span>
+          <button onclick="pedir('X-Burger')">Pedir</button>
         </div>
-
-        <div class="card-text">
-          <h2>Delivery - Centenário</h2>
-          <p>Faça seu pedido através do WhatsApp</p>
-        </div>
-
-        <button class="open-btn" onclick="whatsapp()">Abrir</button>
-      </div>
-
-      <div class="link-card">
-        <div class="card-thumb whatsapp">
-          <span>WHATSAPP</span>
-        </div>
-
-        <div class="card-text">
-          <h2>WhatsApp - Dirceu</h2>
-          <p>Fale com a unidade Dirceu</p>
-        </div>
-
-        <button class="open-btn" onclick="whatsapp2()">Abrir</button>
-      </div>
-
-      <div class="link-card">
-        <div class="card-thumb menu">
-          <span>CARDÁPIO</span>
-        </div>
-
-        <div class="card-text">
-          <h2>Cardápio</h2>
-          <p>Acesse nosso cardápio</p>
-        </div>
-
-        <button class="open-btn" onclick="cardapio()">Abrir</button>
-      </div>
-
-      <div class="link-card">
-        <div class="card-thumb location">
-          <span>LOCALIZAÇÃO</span>
-        </div>
-
-        <div class="card-text">
-          <h2>Localização - Centenário</h2>
-          <p>Confira a localização da unidade no Centenário</p>
-        </div>
-
-        <button class="open-btn" onclick="localizacao1()">Abrir</button>
       </div>
 
-      <div class="link-card">
-        <div class="card-thumb location">
-          <span>LOCALIZAÇÃO</span>
+      <div class="menu-card">
+        <h3>X-Bacon</h3>
+        <p>Carne, queijo, bacon crocante, alface e molho da casa.</p>
+        <div class="menu-footer">
+          <span>R$ 22,00</span>
+          <button onclick="pedir('X-Bacon')">Pedir</button>
         </div>
-
-        <div class="card-text">
-          <h2>Localização - Dirceu</h2>
-          <p>Confira a localização da nossa unidade no Dirceu</p>
-        </div>
-
-        <button class="open-btn" onclick="localizacao2()">Abrir</button>
       </div>
 
-    </section>
-  </main>
+      <div class="menu-card">
+        <h3>Combo THE</h3>
+        <p>Hambúrguer + batata frita + refrigerante gelado.</p>
+        <div class="menu-footer">
+          <span>R$ 30,00</span>
+          <button onclick="pedir('Combo THE')">Pedir</button>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
+      <div class="menu-card">
+        <h3>Espeto Especial</h3>
+        <p>Espeto bem servido, acompanhado de molho especial.</p>
+        <div class="menu-footer">
+          <span>R$ 12,00</span>
+          <button onclick="pedir('Espeto Especial')">Pedir</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <h3>Batata Frita</h3>
+        <p>Porção crocante e sequinha, perfeita para acompanhar.</p>
+        <div class="menu-footer">
+          <span>R$ 14,00</span>
+          <button onclick="pedir('Batata Frita')">Pedir</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <h3>Refrigerante Lata</h3>
+        <p>Bebida gelada para completar seu pedido.</p>
+        <div class="menu-footer">
+          <span>R$ 6,00</span>
+          <button onclick="pedir('Refrigerante Lata')">Pedir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section about">
+    <div class="section-title">
+      <h2>Sobre Nós</h2>
+      <p>Um lugar feito para quem gosta de comer bem</p>
+    </div>
+
+    <div class="about-box">
+      <p>
+        No <strong>Espeto Burguer THE</strong>, trabalhamos com produtos preparados com carinho,
+        sabor e qualidade. Nossa proposta é oferecer uma experiência simples, prática e deliciosa,
+        seja no local ou no pedido pelo WhatsApp.
+      </p>
+      <p>
+        Nosso compromisso é entregar um atendimento rápido, comida saborosa e um cardápio que agrada
+        quem ama hambúrguer, espeto e combos especiais.
+      </p>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="localizacao" class="section">
+    <div class="section-title">
+      <h2>Localização</h2>
+      <p>Venha nos visitar ou encontre a rota no Google Maps</p>
+    </div>
+
+    <div class="location-box">
+      <div class="location-info">
+        <h3>Espeto Burguer THE</h3>
+        <p>Rua Exemplo, 123 - Centro</p>
+        <p>Teresina - PI</p>
+        <button class="map-btn" onclick="abrirMapa()">Abrir no Google Maps</button>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Teresina%20PI&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="section-title">
+      <h2>Contato</h2>
+      <p>Faça seu pedido ou fale conosco</p>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>Atendimento rápido para pedidos e dúvidas.</p>
+        <button onclick="abrirWhatsApp()">Chamar no WhatsApp</button>
+      </div>
+
+      <div class="contact-card">
+        <h3>Horário</h3>
+        <p>Segunda a Domingo</p>
+        <p>18:00 às 23:30</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <p>@espetoburguerthe</p>
+        <button onclick="abrirInstagram()">Abrir Instagram</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Espeto Burguer THE - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE -->
+  <button class="whatsapp-float" onclick="abrirWhatsApp()"><img src="img/whatsapp-logo.png" alt=""></button>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
